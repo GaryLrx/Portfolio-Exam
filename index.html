@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -13,7 +14,7 @@
 <body>
     <header class="header" role="banner">
         <h1 class="title">
-            <span>Portfolio  Leroux Gary
+            <span>Portfolio Leroux Gary
 
             </span>
         </h1>
@@ -21,18 +22,17 @@
         <button class="burger-button" type="button" role="button" aria-label="open/close navigation">
             <i></i>
         </button>
-    </header> 
+    </header>
 
-        <nav role="navigation" class="navigation" tabindex="0">
-            <a class="navigation__link" href="#Accueil">Accueil</a>
-            <a class="navigation__link" href="#Profil">Profil</a>
-            <a class="navigation__link" href="#Compétences">Compétences</a>
-            <a class="navigation__link" href="#Contact">Contact</a>
-        </nav>
-          
-    
+    <nav role="navigation" class="navigation" tabindex="0">
+        <a class="navigation__link" href="#Accueil">Accueil</a>
+        <a class="navigation__link" href="#Profil">Profil</a>
+        <a class="navigation__link" href="#Compétences">Compétences</a>
+        <a class="navigation__link" href="#Contact">Contact</a>
+    </nav>
+
     <main class="main" role="main">
-        
+
         <p>Développeur Web Junior - Intégrateur</p>
         <a href="#Profil" title="Redirection vers la section profil"></a>
 
@@ -42,37 +42,51 @@
         </div>
 
         <h2>Compétences<h2>
-            <p>Les compétences sont en constante améliorations car le métier du développeur web est en constance évolution</p>
+                <small>
+                    <p>Les compétences sont en constante améliorations car le métier du développeur web est en constance
+                        évolution</p>
+                </small>
 
-            <img src="src/CV_Leroux.png" alt="CV de Leroux Gary">
-            
-            <a href="script.php">Télécharger le CV</a>
+                <div class="cv"><img src="src/CV_Leroux.png" alt="CV de Leroux Gary" id="cv"></div>
 
+                <div id="wrap">
+                    <a href="cv.php" class="btn-slide2">
+                        <span class="circle2"></span>
+                        <span class="title2">Télécharger le CV</span>
+                        <span class="title-hover2">Cliquez ici</span>
+                    </a>
+                </div>
 
-    
+                <div id="container">
+                    <h1>&bull; Contactez-nous &bull;</h1>
+                    <form action="script.php" method="post" id="contact_form">
+                        <div class="name">
+                            <label for="name"></label>
+                            <input type="text" placeholder="Nom :" name="name" id="name_input" required>
+                        </div>
+                        <div class="email">
+                            <label for="email"></label>
+                            <input type="email" placeholder="E-Mail : " name="email" id="email_input" required>
+                        </div>
+
+                        <div class="message">
+                            <label for="message"></label>
+                            <textarea name="message" placeholder="Votre message :" id="message_input" cols="30" rows="5"
+                                required></textarea>
+                        </div>
+                        <div class="submit">
+                            <input type="submit" value="Envoyez" id="form_button" />
+                        </div>
+                    </form>
+                </div>
 
     </main>
 
+    <div class="footer-basic">
         <footer>
-            <form action="" method="post">
-                <input type="text" name="" id="">
-                <input type="text" name="" id="">
-                <input type="text" name="" id="">
-                <input type="text" name="" id="">
-                <input type="text" name="" id="">
-                
-                <textarea name="" id="" cols="30" rows="10">
-
-                </textarea>
-
-                <small>* Champ Obligatoire</small>
-                <input type="checkbox" name="" id="">
-                <input type="submit" value="">
-
-                <a href="mailto:gary.leroux21@gmail.com" title="Redirection vers l'envoie d'un mail"><img src="src/mail.png" alt="Icone de mail">gary.leroux21@gmail.com</a>
-                <a href="tel:+33761051266" title="Redirection vers l'appel"><img src="src/phone.png" alt="Icone de téléphone">07.61.05.12.66</a>
-                <a href="https://www.google.com/maps/d/viewer?mid=1W7HO6uIc5JDLyZ9WA1878-0FJZk&hl=fr&source=hp&ie=UTF8&hq&hnear=Soissons&gl=fr&ei=luZIS6HTGczL4galsvz8Ag&ved=0CAsQ8gEwAA&msa=0&ll=49.38504099999999%2C3.3313249999999917&spn=0.007361%2C0.01929&t=k&z=16" target="_blank" title="Redirection vers une map de Soissons"><img src="src/home.png" alt="Icone de maison">02200 SOISSONS</a>
-            </form>
+            <p class="copyright">Leroux Gary © 2022</p>
         </footer>
+    </div>
 </body>
+
 </html>
