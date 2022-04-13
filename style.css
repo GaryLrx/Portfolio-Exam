@@ -1,0 +1,128 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/* NAVIGATION */
+    a{
+        list-style: none;
+    }
+
+/* Config */
+:root {
+    --burger-button-size: 1.6rem;
+    --burger-button-thickness: 6px;
+    --burger-button-color: purple;
+    --nav-bg: transparent;
+    --nav-link-bg: rgb(175 84 236 / 40%);;
+    --nav-link-color: #000;
+    --nav-link-hover: #3fcdc68c;
+    --main-bg: beige;
+  }
+  
+/* Global layout */
+  
+  html, body {
+    overflow-x: hidden; /* you shall not pass! */
+  }
+  
+/* styling  header */
+  .header {
+    display: grid;
+    padding: 2rem;
+    grid-template-columns: auto auto;
+    justify-content: space-between;
+  }
+  
+/* styling  nav */
+  .navigation {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 4px;
+    max-height: 0;
+    overflow: hidden;
+  }
+  
+/* styling opened nav */
+  .navigation {
+    transition: max-height .25s;
+    will-change: max-height;
+  }
+  .navigation.is-opened {
+    max-height: 20rem;
+    overflow: visible;
+  }
+  
+/* styling main */
+  .main {
+    position: relative;
+  }
+  
+/* styling button */
+  .burger-button {
+    appearance: none;
+    all: unset;
+    display: inline-grid;
+    grid-template-rows: repeat(3, var(--burger-button-thickness));
+    align-content: space-between;
+    vertical-align: top;
+    height: var(--burger-button-size);
+    width: var(--burger-button-size);
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+  }
+  .burger-button>*,
+  .burger-button::after, 
+  .burger-button::before {
+    content: "";
+    background: var(--burger-button-color);
+  }
+  .burger-button:focus-visible {
+
+/* affichage du focus lors de la navigation au clavier */
+    outline: 2px dashed var(--burger-button-color);
+    outline-offset: 5px;
+  }
+  
+/* Global deco */
+  
+  * {
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin: 0;
+    font-family: system-ui, sans-serif;
+  }
+  
+  
+  .title {
+    display: grid;
+    grid-template-columns: auto auto;
+    margin: 0;
+    gap: 1rem;
+    align-items: center;
+    color: #555;
+    font-weight: 200;
+  }
+  
+  .main {
+    border-top: 6px solid #000;
+    padding: 2rem;
+    background: var(--main-bg);
+  }
+  
+  .navigation {
+    background: var(--nav-bg);
+  }
+  .navigation__link {
+    padding: 1rem;
+    background: var(--nav-link-bg);
+    color: var(--nav-link-color);
+    text-decoration: none;
+  }
+  .navigation__link:hover,
+  .navigation__link:focus,
+  .navigation__link:active {
+    background: var(--nav-link-hover);
+  }
