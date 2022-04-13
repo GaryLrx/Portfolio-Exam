@@ -33,60 +33,125 @@
 
     <main class="main" role="main">
 
+        <button class="scrollToTopBtn">↟</button>
         <p>Développeur Web Junior - Intégrateur</p>
+
         <a href="#Profil" title="Redirection vers la section profil"></a>
 
-        <h2>A propos de moi</h2>
-        <div>
-            <p>Bonjour, je m'apelle Leroux Gary, développeur Web junior</p>
+        <div class="infos">
+            <h2>A propos de moi</h2>
+            <p>Bonjour et Bienvenu à vous sur mon porte folio.
+                Je m’appelle Leroux Gary, j’ai 23 ans.
+                Avant tout cela j’ai été vendeur, serveur ou encorsecrétaire via différents stages lors de mes
+                études.
+                J’ai toujours été interessé par l'informatique, un ami à moi avait effectué une formation dans la
+                programmation et je m'étais interessé de loin.
+                Quand l'opportunité c'est présenter à moi je n'ai pas hésité à sauter le pas et rejoindre la formation
+                de la SJT, je suis quelqu'un d'assez curieux et qui aime découvrir des choses.
+                Cette formation était parfaite pour moi car je n'avais aucune base et cela m’a permis de faire marcher
+                ma curiosité et ma soif d'apprendre.
+                Je n'ai pas encore fait de grandes réalisations mais celle faites en formation sont disponible <a
+                    href="https://github.com/GaryLrx" title="Redirection vers mon GitHub" target="_blank" id="git">ici</a>
+            </p>
         </div>
 
-        <h2>Compétences<h2>
-                <small>
-                    <p>Les compétences sont en constante améliorations car le métier du développeur web est en constance
-                        évolution</p>
-                </small>
+        <div class="comp">
+            <h2 id="Compétences">Compétences<h2>
+                    <small>
+                        <p>* Les compétences sont en constante améliorations car le métier du développeur web est en
+                            constance
+                            évolution</p>
+                    </small>
+                    <div class="cv"><img src="src/CV_Leroux.png" alt="CV de Leroux Gary" id="cv"></div>
+                    <div id="wrap">
+                        <a href="cv.php" class="btn-slide2">
+                            <span class="circle2"></span>
+                            <span class="title2">Télécharger le CV</span>
+                            <span class="title-hover2">Cliquez ici</span>
+                        </a>
+                    </div>
+        </div>
 
-                <div class="cv"><img src="src/CV_Leroux.png" alt="CV de Leroux Gary" id="cv"></div>
-
-                <div id="wrap">
-                    <a href="cv.php" class="btn-slide2">
-                        <span class="circle2"></span>
-                        <span class="title2">Télécharger le CV</span>
-                        <span class="title-hover2">Cliquez ici</span>
-                    </a>
+        <div id="container">
+            <h1 id="Contact">&bull; Contact&bull;</h1>
+            <form action="script.php" method="post" id="contact_form">
+                <div class="name">
+                    <label for="name"></label>
+                    <input type="text" placeholder="Nom :" name="name" id="name_input" required>
+                </div>
+                <div class="email">
+                    <label for="email"></label>
+                    <input type="email" placeholder="E-Mail : " name="email" id="email_input" required>
                 </div>
 
-                <div id="container">
-                    <h1>&bull; Contactez-nous &bull;</h1>
-                    <form action="script.php" method="post" id="contact_form">
-                        <div class="name">
-                            <label for="name"></label>
-                            <input type="text" placeholder="Nom :" name="name" id="name_input" required>
-                        </div>
-                        <div class="email">
-                            <label for="email"></label>
-                            <input type="email" placeholder="E-Mail : " name="email" id="email_input" required>
-                        </div>
-
-                        <div class="message">
-                            <label for="message"></label>
-                            <textarea name="message" placeholder="Votre message :" id="message_input" cols="30" rows="5"
-                                required></textarea>
-                        </div>
-                        <div class="submit">
-                            <input type="submit" value="Envoyez" id="form_button" />
-                        </div>
-                    </form>
+                <div class="message">
+                    <label for="message"></label>
+                    <textarea name="message" placeholder="Votre message :" id="message_input" cols="30" rows="5"
+                        required></textarea>
                 </div>
+                <div class="submit">
+                    <input type="submit" value="Envoyez" id="form_button" />
+                </div>
+            </form>
+        </div>
+
+        <div>
+            
+        </div>
 
     </main>
 
-    <div class="footer-basic">
-        <footer>
-            <p class="copyright">Leroux Gary © 2022</p>
-        </footer>
-    </div>
+<footer class="footer-distributed">
+
+			<div class="footer-left">
+				<p class="footer-links">
+					<a href="#" class="link-1">Accueil</a>
+					
+					<a href="#">Blog</a>
+			
+					<a href="#">A propos</a>
+					
+					<a href="#">Faq</a>
+					
+					<a href="#Contact">Contact</a>
+				</p>
+
+				<p class="footer-company-name">Leroux Gary © 2022</p>
+			</div>
+
+			<div class="footer-center">
+
+				<div>
+					<img src="src/home.png" alt="">
+					<p><span>02200</span> Soissons</p>
+				</div>
+
+				<div>
+					<img src="src/phone.png" alt="">
+					<p>07.61.05.12.66</p>
+				</div>
+
+				<div>
+					<img src="src/mail.png" alt="">
+					<p><a href="mailto:gary.leroux21@gmail.com">gary.leroux21@gmail.com</a></p>
+				</div>
+
+			</div>
+
+			<div class="footer-right">
+
+				<div class="footer-icons">
+
+					<a href="#"></a>
+					<a href="#"></a>
+					<a href="#"></a>
+					<a href="#"></a>
+
+				</div>
+
+			</div>
+
+		</footer>
 </body>
 
 </html>
