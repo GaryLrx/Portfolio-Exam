@@ -1,6 +1,6 @@
 <?php
     //CONNEXION BDD
-        $connexion = mysqli_connect('localhost','root','');
+        $connexion = mysqli_connect('localhost','root','azerty');
 
         if($connexion){ }
         else{

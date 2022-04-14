@@ -8,6 +8,8 @@
     <meta name="description" content="">
     <link rel="stylesheet" href="style.css">
     <script src="script.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <title>Portfolio</title>
 </head>
 
@@ -55,49 +57,49 @@
             </p>
         </div>
 
-        <div class="comp">
-            <h2 id="Compétences">Compétences<h2>
-                    <small>
-                        <p>* Les compétences sont en constante améliorations car le métier du développeur web est en
-                            constance
-                            évolution</p>
-                    </small>
-                    <div class="cv"><img src="src/CV_Leroux.png" alt="CV de Leroux Gary" id="cv"></div>
-                    <div id="wrap">
-                        <a href="cv.php" class="btn-slide2">
-                            <span class="circle2"></span>
-                            <span class="title2">Télécharger le CV</span>
-                            <span class="title-hover2">Cliquez ici</span>
-                        </a>
+        <div data-aos="fade-right" data-aos-duration="1000" > 
+            <div class="comp">
+                <h2 id="Compétences">Compétences<h2>
+                        <small>
+                            <p>* Les compétences sont en constante améliorations car le métier du développeur web est en
+                                constance
+                                évolution</p>
+                        </small>
+                        <div class="cv"><img src="src/CV_Leroux.png" alt="CV de Leroux Gary" id="cv"></div>
+                        <div id="wrap">
+                            <a href="cv.php" class="btn-slide2">
+                                <span class="circle2"></span>
+                                <span class="title2">Télécharger le CV</span>
+                                <span class="title-hover2">Cliquez ici</span>
+                            </a>
+                        </div>
+            </div>
+        </div>
+
+        <div data-aos="fade-up" data-aos-duration="3000">
+            <div id="container">
+                <h1 id="Contact">&bull; Contact&bull;</h1>
+                <form action="script.php" method="POST" id="contact_form">
+                    <div class="name">
+                        <label for="name"></label>
+                        <input type="text" placeholder="Nom :" name="name" id="name_input" required>
                     </div>
+                    <div class="email">
+                        <label for="email"></label>
+                        <input type="email" placeholder="E-Mail : " name="email" id="email_input" required>
+                    </div>
+                    <div class="message">
+                        <label for="message"></label>
+                        <textarea name="message" placeholder="Votre message :" id="message_input" cols="30" rows="5"
+                            required></textarea>
+                    </div>
+                    <div class="submit">
+                        <input type="submit" value="Envoyez" id="form_button" />
+                    </div>
+                </form>
+            </div>
         </div>
 
-        <div id="container">
-            <h1 id="Contact">&bull; Contact&bull;</h1>
-            <form action="script.php" method="post" id="contact_form">
-                <div class="name">
-                    <label for="name"></label>
-                    <input type="text" placeholder="Nom :" name="name" id="name_input" required>
-                </div>
-                <div class="email">
-                    <label for="email"></label>
-                    <input type="email" placeholder="E-Mail : " name="email" id="email_input" required>
-                </div>
-
-                <div class="message">
-                    <label for="message"></label>
-                    <textarea name="message" placeholder="Votre message :" id="message_input" cols="30" rows="5"
-                        required></textarea>
-                </div>
-                <div class="submit">
-                    <input type="submit" value="Envoyez" id="form_button" />
-                </div>
-            </form>
-        </div>
-
-        <div>
-            
-        </div>
 
     </main>
 
@@ -120,38 +122,32 @@
 			</div>
 
 			<div class="footer-center">
-
 				<div>
-					<img src="src/home.png" alt="">
+					<img src="src/home.png" alt="Logo maison">
 					<p><span>02200</span> Soissons</p>
 				</div>
-
 				<div>
-					<img src="src/phone.png" alt="">
+					<img src="src/phone.png" alt="Logo téléphone">
 					<p>07.61.05.12.66</p>
 				</div>
-
 				<div>
-					<img src="src/mail.png" alt="">
-					<p><a href="mailto:gary.leroux21@gmail.com">gary.leroux21@gmail.com</a></p>
+					<img src="src/mail.png" alt="Logo mail">
+					<p><a href="mailto:gary.leroux21@gmail.com" title="Redirection vers l'envoie d'un mail" target="_blank">gary.leroux21@gmail.com</a></p>
 				</div>
-
 			</div>
 
 			<div class="footer-right">
-
 				<div class="footer-icons">
-
-					<a href="#"></a>
-					<a href="#"></a>
-					<a href="#"></a>
-					<a href="#"></a>
-
+					<a href="https://www.linkedin.com/in/gary-leroux-886478219/" title="Redirection vers LikedIn" target="_blank"><img src="src/linkedin.png" alt="Logo Linkedin" id="socials"></a>
+					<a href="https://github.com/GaryLrx" title="Redirection vers github" target="_blank"><img src="src/git.png" alt="Logo GitHub" id="socials" ></a>
 				</div>
-
 			</div>
 
 		</footer>
 </body>
+
+<script>
+    AOS.init();
+  </script>
 
 </html>
